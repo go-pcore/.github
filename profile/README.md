@@ -48,14 +48,16 @@ and for **go-ruby-puppet**, which marshals `rbgo.Value ↔ pcore.Value`.
 
 ## Status
 
-**v0.1 — type model, parser, value model, operations and rich-data
-serialization complete.** The Pcore type calculus (scalar, collection, abstract,
-plus `Timestamp` / `Timespan` / `Binary` rich data), a round-trippable type
-parser, the value model (with a redacting `Sensitive`), and `IsInstance` /
-`IsAssignable` / `Infer` / `Generalize` / `CommonType` / `ToData` / `FromData` —
-at 100% coverage, `gofmt` + `go vet` clean, CI green across amd64, arm64,
-riscv64, loong64, ppc64le and s390x. Type **aliases** and **`TypeSet`** are staged
-for v0.2.
+**v0.2 — full Pcore type calculus.** The complete Puppet `Puppet::Pops::Types`
+set is implemented: the type calculus (scalar, collection, abstract, plus
+`Timestamp` / `Timespan` ranges, `Binary`, `SemVer` / `SemVerRange`, `Init`,
+`Object`, `RichData`, `Runtime`, `URI`, `Iterable` / `Iterator`, `Error` and
+`Callable`), a round-trippable type parser, the value model (with a redacting
+`Sensitive`), `IsInstance` / `IsAssignable` / `Infer` / `Generalize` /
+`CommonType` / `ToData` / `FromData`, and **recursive type aliases** and
+**`TypeSet`** via a `Loader` type environment — at 100% coverage, `gofmt` +
+`go vet` clean, CI green across amd64, arm64, riscv64, loong64, ppc64le and
+s390x.
 
 BSD-3-Clause.
 
